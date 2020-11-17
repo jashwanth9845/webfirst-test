@@ -2,6 +2,10 @@
 
 
 .loginb{
+   position: fixed;
+   top: 0; 
+   right: 0;
+   display: block;
 	width: 450px;
 	height: 500px;
 	background-color: hsl(40, 12%, 35%);
