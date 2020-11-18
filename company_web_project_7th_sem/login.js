@@ -1,5 +1,22 @@
-{
-	Connection con=null;
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Param"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+</head>
+<body>
+<form action="Login.js" method="post">
+<%
+Connection con=null;
 ResultSet rs;
 Statement s;
 String n1=null,pa1=null,New=null,myname=null,mypass=null;
@@ -39,7 +56,9 @@ String n1=null,pa1=null,New=null,myname=null,mypass=null;
 	    }
 	    else
 	    {
-	    	
+	    	%>
+	    	 <%="<p style='color:red'>enter username and password </p>"%>
+	      <% 
 	    	   RequestDispatcher rd=request.getRequestDispatcher("Password.html");
 	    		 rd.include(request, response);
 	    		
@@ -50,4 +69,8 @@ String n1=null,pa1=null,New=null,myname=null,mypass=null;
 	    	 pw.write("<p style=color:red> Invalid username or password</p>");
 	    	 rd.include(request, response); 
 	     }
-}
+%>
+
+</form>
+</body>
+</html>
