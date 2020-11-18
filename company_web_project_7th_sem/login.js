@@ -14,7 +14,7 @@
 <title>Welcome</title>
 </head>
 <body>
-<form action="Login.js" method="post">
+<form action="login.js" method="post">
 <%
 Connection con=null;
 ResultSet rs;
