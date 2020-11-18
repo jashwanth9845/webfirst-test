@@ -27,7 +27,7 @@ String n1=null,pa1=null,New=null,myname=null,mypass=null;
  s1.setAttribute("l1",pa);
  try{
 		Class.forName("com.mysql.jdbc.Driver");
-		String url="jdbc:mysql://localhost:3306/hotel";
+		String url="jdbc:mysql://localhost:3307/company";
 		con=DriverManager.getConnection(url,"root","jashwanth");
 		
 } catch (ClassNotFoundException e)
