@@ -8,13 +8,14 @@
 <body>
 <div class="loginb">
 <h1 style="color:orange"> Login Here</h1>
-<form action="login.js" method="post">
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
 <p>username</p>
-<input type="text"  name="n" placeholder="Enter username"><br><br>
+<input type="text"  name="name" placeholder="Enter username"><br><br>
 <p>password</p>
-<input type="password"  name="p" placeholder="Enter password"><br><br>
+<input type="password"  name="password" placeholder="Enter password"><br><br>
 <div class="button">
-<input type="submit" value="Login" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Signup">
+<input type="submit" value="Login" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="Signup">
 <input type="reset" value="Cancle">
 </div>
 <a href="forgot.jsp" target="_blank">Forgot Password</a>
