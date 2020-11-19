@@ -6,6 +6,7 @@
 <title>Welcome</title>
 </head>
 <body>
+<<<<<<< HEAD
 <?php
 $server_name='localhost:3307';
 $user_name='root';
@@ -23,6 +24,32 @@ echo "database connection successfully";
    $q="select * from userdata";
    $s=con.createStatement();
    $rs=s.executeQuery(q);
+=======
+<form action="login.js" method="post">
+<%
+Connection con=null;
+ResultSet rs;
+Statement s;
+String n1=null,pa1=null,New=null,myname=null,mypass=null;
+ HttpSession s1=request.getSession(true);
+ String name=request.getParameter("n");
+ String pa=request.getParameter("p");
+ s1.setAttribute("l", name);
+ s1.setAttribute("l1",pa);
+ try{
+		Class.forName("com.mysql.jdbc.Driver");
+		String url="jdbc:mysql://localhost:3307/company";
+		con=DriverManager.getConnection(url,"root","jashwanth");
+		
+} catch (ClassNotFoundException e)
+ {
+	    e.printStackTrace();
+ }
+   String q="select * from admin";
+   s=con.createStatement();
+   rs=s.executeQuery(q);
+   PrintWriter pw=response.getWriter();
+>>>>>>> 45b238102e5cfdfde71f4f53f4b2cccb03578280
   
     
     while($rs.next())
