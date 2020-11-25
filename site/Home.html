@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Home page</title>
+ </head>
+ <link rel="stylesheet type="text/css" href="home.css">
+  <link rel="stylesheet type="text/css" href="iframe.css">
+ <body>
+  <form method="post" action="iframe.html" name="loginform">
+  <h1 class="jmtech" id="top"><b style="color:#28783a"> J</b><b style="color:#173d75">M </b> TECHS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="namenxt">THIS IS THE BEST SITE TO GET STARTED </span></h1><br><br>
+<nav class="sticky">
+  <div class="spacer">
+    &nbsp;
+</div>
+  <ul class="list-inline">
+    <li><a style="text-decoration: none; color:white;" href="#top">Home</a></li>
+    <li><a style="text-decoration: none; color:white;" href="#myImg">Services</a></li>
+    <li><a style="text-decoration: none; color:white;" href="#About US">About US</a></li>
+    <li><a style="text-decoration: none; color:white;" href="contactus.php">Contact US</a></li>
+    <li><a style="text-decoration: none; color:white;" href="feedback.html">Feedback</a></li>
+    <li><a style="text-decoration: none; color:white;" href="login.html">Logout</a></li>
+  </ul >
+</nav>
+<div class="miniproject">
+ <img id="myImg" src="login_pic.jpeg" alt="Event Management System" style="width:100%;max-width:310px">
+ <img id="myImg1" src="login_pic.jpeg" alt1="Hospital Management System" style="width:100%;max-width:310px">
+ <img id="myImg2" src="login_pic.jpeg" alt="Library Managment System" style="width:100%;max-width:310px">
+  <img id="myImg3" src="login_pic.jpeg" alt="Railway Management System" style="width:100%;max-width:310px">
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="projectlinks" href="project1.php">Event Management System</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="projectlinks" href="project2.php">Hospital Management System</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="projectlinks" href="project3.php">Library Managment System</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="projectlinks" href="project4.php">Railway Management System</a></p>
+ <img id="myImg4" src="login_pic.jpeg" alt="Restaurant Management system" style="width:100%;max-width:310px"><p>&nbsp;<a class="projectlinks" href="project5.php">Restaurant Management system</a></p>
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <iframe src="Event_management system scrrenshots.pdf" class="modal-content" id="img01"></iframe>
+  <div id="caption"></div>
+</div>
+<div id="myModal1" class="modal">
+  <span class="close1">&times;</span>
+  <iframe src="Hospital_screenshots.pdf" class="modal-content" id="img02"></iframe>
+  <div id="caption"></div>
+</div>
+<div id="myModal2" class="modal">
+  <span class="close2">&times;</span>
+  <iframe src="Library_screenshots.pdf" class="modal-content" id="img03"></iframe>
+  <div id="caption"></div>
+</div>
+<div id="myModal3" class="modal">
+  <span class="close3">&times;</span>
+  <iframe src="Railway_screenshots.pdf" class="modal-content" id="img04"></iframe>
+  <div id="caption"></div>
+</div>
+<div id="myModal4" class="modal">
+  <span class="close4">&times;</span>
+  <iframe src="Restaurant screenshots.pdf" class="modal-content" id="img05"></iframe>
+  <div id="caption"></div>
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src ="Event_management system scrrenshots.pdf";
+  captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+var modal1 = document.getElementById("myModal1");
+var img1 = document.getElementById("myImg1");
+var modalImg1 = document.getElementById("img02");
+var captionText1 = document.getElementById("caption");
+img1.onclick = function(){
+  modal1.style.display = "block";
+  modalImg1.src ="Hospital_screenshots.pdf";
+  captionText1.innerHTML = this.alt1;
+}
+var span1 = document.getElementsByClassName("close1")[0];
+span1.onclick = function() { 
+  modal1.style.display = "none";
+}
+
+var modal2 = document.getElementById("myModal2");
+var img2 = document.getElementById("myImg2");
+var modalImg2 = document.getElementById("img03");
+var captionText2 = document.getElementById("caption");
+img2.onclick = function(){
+  modal2.style.display = "block";
+  modalImg2.src ="Library_screenshots.pdf";
+  captionText2.innerHTML = this.alt2;
+}
+var span2 = document.getElementsByClassName("close2")[0];
+span2.onclick = function() { 
+  modal2.style.display = "none";
+}
+var modal3 = document.getElementById("myModal3");
+var img3 = document.getElementById("myImg3");
+var modalImg3 = document.getElementById("img04");
+var captionText3 = document.getElementById("caption");
+img3.onclick = function(){
+  modal3.style.display = "block";
+  modalImg3.src ="Railway_screenshots.pdf";
+  captionText3.innerHTML = this.alt3;
+}
+var span3 = document.getElementsByClassName("close3")[0];
+span3.onclick = function() { 
+  modal3.style.display = "none";
+}
+var modal4 = document.getElementById("myModal4");
+var img4 = document.getElementById("myImg4");
+var modalImg4 = document.getElementById("img05");
+var captionText4 = document.getElementById("caption");
+img4.onclick = function(){
+  modal4.style.display = "block";
+  modalImg4.src ="Restaurant screenshots.pdf";
+  captionText4.innerHTML = this.alt4;
+}
+var span4 = document.getElementsByClassName("close4")[0];
+span4.onclick = function() { 
+  modal4.style.display = "none";
+}
+
+</script>
+<article class="service">
+  <h1>Our Services</b></h1><br>
+ <h2><b>Demo Websites</b></h2>
+  <p>We provide demo websites along with code ,which are in form of files.<br/>
+     We are providing demo websites service, which will give a brief introduction to websites creation and the user can gain knowledge about platforms to be used for  website creation.<br/>
+     With this basic knowledge, the user can easily get adapted to the future technologies or skills regarding web creation.
+ </p><br/> 
+ <h2 id="About US"><b>Mini Projects</b></h2>
+  <p>We provide Mini projects in different languages like c, java,python,DBMS, html and css.<br/>
+     These mini projects can be a source for future enhancement of other mini or major projects.<br/>
+     Since these mini projects consists of all basic code and methods, it can also be considered as a crash course and these can be used for reference while developing      other related projects later.
+ </p>
+</article>
+<article class="aboutus"  >
+  <h1>About Us</h1><br>
+  <h2><b>Who we are?</b></h2>
+   <p><ul style="list-style-type: none;">
+      <li>"JM Techs", is a website, which will readily provide  mini projects and websites code in form of files to the users who are in need of them.</li>
+      <li>The users can easily download the codes, just by signing up to our website and run on their systems.</li>
+      <li>We provide these services for free of cost, for those projects or website codes, already existing.</li></ul></p>
+  <h2><b>What matters to us?</b></h2>
+   <p><ul  style="list-style-type: none;">
+      <li>Users' ease is important to us.</li>
+      <li>We provide these services only with intention to save the time of our users.</li>
+      <li>We also care about user satisfaction and their thoughts towards us.</li></ul></p>
+  <h2><b>What else do we provide?</b></h2>
+    <p><ul style="list-style-type: none;">
+      <li>As the technology is being developed in these days, we also provide the projects to our users based on their requirements.</li>
+      <li>The user can let us know their queries in our feedback section or contact us for any required project.</li></ul></p>
+   <h2><b> Our Future Scope!!!</b></h2>
+    <p><ul style="list-style-type: none;">
+     <li>Currently, we are  providing only website & mini projects codes to users.</li>
+     <li>Our future plans include providing major projects along with special teaching classes to those required users , which will not only give them project but also provides the knowledge and usage of technologies that are being used in the project.</li></ul></p>
+   <h2 style="text-align:center;"><b>Your Support, is our Strength!!!</b></h2>
+</article>
+</form>
+ <script>
+var header = document.getElementById("fixedheader");
+var sticky = header.offsetTop;
+window.onscroll = function() 
+{
+  fixed()
+};
+function fixed() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+ </body>
+</html>
