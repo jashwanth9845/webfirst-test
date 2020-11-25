@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign up</title>
+</head>
+<link rel="stylesheet" type="text/css" href="signup.css" >
+<body>
+  <div class="loginb1">
+    <h1 style="color:orange"> Signup Here</h1>
+<form method="post" action="signup.php" name="form">
+<p>usename<span style="color: red"> *</span></p>
+
+<input class="input" type="text" name="username"/>
+<p>Email<span style="color: red"> *</span></p>
+
+<input class="input" type="email" name="Email"/>
+<p>Mobile Number<span style="color: red"> *</span></p>
+
+<input class="input" type="number" name="phone"/>
+<p>Password<span style="color: red"> *</span></p>
+
+<input class="input" type="password" name="password"/>
+<p>Confirm Password<span style="color: red"> *</span></p>
+
+<input class="input" type="text" name="compassword" />
+<div class="button">
+     <input type="submit"  name="Signupbtn" value="Submit" onclick="signed();"/>
+      <input type="submit" name="back" value="Back" onclick="Welcome();" />
+  </div>
+  <h4 style="color:#0a0a0a">Note: If One  Of The Credential Are Missing or Worng you Have To Refill The Form.</h4>
+</form>
+</div>
+</body>
+</html>
+<script>
+  function Welcome(){
+    document.forms['form'].action='login.html';
+    document.forms['form'].submit
+  }
+</script>
+<script>
+  function signed(){
+    document.forms['form'].action='Signup.php';
+    document.forms['form'].submit
+  }
+</script>

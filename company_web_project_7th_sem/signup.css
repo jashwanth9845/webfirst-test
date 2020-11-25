@@ -1,25 +1,11 @@
 @charset "ISO-8859-1";
 
-.input
-{
-	border:1px solid ;
-	border-radius: 10px;
-	border-color: white;
-	background: transparent;
-	padding: 0px 5px;
-	height: 40px;
-	width: 50%;
-	color: black;
-	font-weight: bold;
-	font-size: 18px;
-}
-.loginb{
-   position: fixed;
-   top: 0; 
+
+.loginb1{
    right:0;
    display: block;
 	width: 500px;
-	height: 600px;
+	height: 800px;
 	background-color: hsl(40, 12%, 35%);
 	color:#fff;
 	top: 40%;
@@ -34,20 +20,34 @@
 body {
 
     background-color: #1b214d;
-  }
+ 
+*/}
 h1{
 	margin: 0;
 	padding: 0 0 20px;
 	text-align: center;
 	font-size: 22px;
 }
-.loginb p {
+.input
+{
+	border:1px solid ;
+	border-radius: 10px;
+	border-color: white;
+	background: transparent;
+	padding: 0px 5px;
+	height: 40px;
+	width: 50%;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+.loginb1 p {
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
 	font-size: 20px;
 }
-.loginb input {
+.loginb1 input {
 	 width: 100%;
 	 margin-bottom: 20px;
 }
@@ -55,37 +55,14 @@ h1{
 	 width: 45%;
 	 margin-bottom: 20px;
 }
-
-.button input:nth-child(3) {
-	 width: 100%;
-	 margin-bottom: 20px;
-}
-a
-{
-
-text-decoration: none;
-
-color:orange;
-}
-a:hover{
-	color:red;
-}
-
-
 .button input:hover{
 			box-shadow: 1.5px 1.5px 3px 3px #857e7e ;
 	background-color: green;
 	border-radius: 10px;
 	color:black;
 }
-.button1 input:hover{
-			box-shadow: 1.5px 1.5px 3px 3px #857e7e ;
-		background-color: green;
-	border-radius: 10px;
-	color:black;
-}
 
-.button input:nth-child(3):hover{
+.button input:nth-child(2):hover{
 			box-shadow: 1.5px 1.5px 3px 3px #857e7e ;
 	background-color: red;
 	border-radius: 10px;

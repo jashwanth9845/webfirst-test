@@ -1,49 +1,41 @@
 
 <?php
-
-$con=new mysqli("localhost:3307","root","","company");
-if($con->connect_error)
-{
-	die("unableto connect".$con->connect_error);
-
+session_start();
+$host = "localhost:3307";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "company";
+$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+if (mysqli_connect_error()){
+die('Connect Error ('. mysqli_connect_errno() .') '
+. mysqli_connect_error());
 }
-echo "database connection successfully";
-
-
-$result=$con->query("SELECT * FROM userdata");
-
-foreach ($result as $value) {
+else{
+$myname = filter_input(INPUT_POST, 'na');
+$mypass = filter_input(INPUT_POST, 'pa');
+    $result=$conn->query("SELECT name, password FROM data WHERE name='$myname' and password='$mypass'");
+foreach ($result as$value) {
 	$na=$value['name'];
-	$pa=$value['password'];
+	$pa=$value['password'];	
 }
+if ($mypass==null or $myname==null) 
+{
 
-  if (isset( $_get['name'] )) {
-    $myname=$_get['name'];
-}else
-{
-	$myname = "<br>name is not in post method<br>";
+    echo "<script type='text/javascript'>alert('enter userdata');
+    window.location.href='login.html';</script>";
 }
-if (isset( $_get['password'] )) {
-    $mypass=$_get['password'];
-}
-else
-{
-	$mypass = "<br> pass is not in post method";
-}
-echo $myname;
-echo $mypass;
-    // System.out.println(myname);
-     if($myname==null or $mypass==null)
-	    {
-	    	echo "<p style='color:red'>enter username and password </p>";	
-	    }
-	    elseif($myname!=$na or $mypass!=$pa)
+    elseif($myname!=$na or $mypass!=$pa)
 	     {
-	    	 echo "<p style=color:red> Invalid username or password</p>";
+	  
+    echo "<script type='text/javascript'>alert('invalid userdata');
+     window.location.href='login.html';</script>";
+
 	     }
 	    elseif($myname==$na and $mypass==$pa)
 	    {
-	     echo "logged in ";
-	    }
-
+	  
+          header("Location:Home.html");
+exit();
+}
+}
 ?>
